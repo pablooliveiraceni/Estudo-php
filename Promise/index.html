@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumindo dados</title>
+</head>
+<body>
+
+    <ul id="lista-estados">
+
+    </ul>
+
+    <button onclick="getApi()">Buscar os dados</button>
+
+    <input type="text" onchange="">
+
+    <script>
+       /* function getStates()
+        {
+
+           
+            const url = "https://servicodados.ibge.gov.br/api/v1/localidades/estados"
+            //Fetch = Buscar 
+            //Retorno do JSON
+            //Consumo dos dados
+
+           // Vai buscar o café - Busque os dados
+            fetch(url)
+
+            // O garçom trouxe o café - me traga os dados
+            .then((response) => response.json() )
+
+            // Bebendo o café - Consumindo os dados
+
+            .then((dados) => {console.log(dados)
+                let ul = document.getElementById('lista-estados');
+
+               dados.map((dado) => {
+                   ul.innerHTML += <li>${dado.nome}</li>
+               })
+            })  
+        } */
+
+          /*  async function getApi() 
+            {
+                const url = "https://servicodados.ibge.gov.br/api/v1/localidades/estados"
+
+                let response = await fetch(url);
+                let dados = await response.json();
+                console.log(dados);
+
+               const ul = document.getElementById('lista-estados');
+
+               map.dados(dado =>  ul.innerHTML += `<li>${dados.nome}</li>` )
+            } */
+            async function getApi()
+            {    
+                const url = "viacep.com.br/ws/09172030/json/"
+                let response = await fetch(url);
+                let dados = await response.json();
+                 console.log(dados);
+
+
+            }
+            
+    </script>
+</body>
+</html>
